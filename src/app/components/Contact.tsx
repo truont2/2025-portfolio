@@ -1,10 +1,10 @@
-// import React from 'react'
+import { useState, useTransition } from "react";
 
 type Props = {};
 
 const Contact = (props: Props) => {
     const [isPending, startTransition] = useTransition();
-    const { toast } = useToast();
+    // const { toast } = useToast();
     const [formData, setFormData] = useState({
         fullName: "",
         email: "",
@@ -37,9 +37,9 @@ const Contact = (props: Props) => {
             });
 
             if (res.ok) {
-                toast({
-                    description: "Your message has been sent.",
-                });
+                // toast({
+                //     description: "Your message has been sent.",
+                // });
 
                 // Clear form data
                 setFormData({
@@ -49,14 +49,14 @@ const Contact = (props: Props) => {
                     message: "",
                 });
             } else {
-                toast({
-                    variant: "destructive",
-                    title: "Uh oh! Something went wrong.",
-                    description: "There was a problem with your request.",
-                    action: (
-                        <ToastAction altText="Try again">Try again</ToastAction>
-                    ),
-                });
+                // toast({
+                //     variant: "destructive",
+                //     title: "Uh oh! Something went wrong.",
+                //     description: "There was a problem with your request.",
+                //     action: (
+                //         <ToastAction altText="Try again">Try again</ToastAction>
+                //     ),
+                // });
             }
         });
     };
