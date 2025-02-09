@@ -22,7 +22,8 @@ import menu_white from './menu-white.png';
 import mobile_icon from './mobile-icon.png';
 import mongodb from './mongodb.png';
 import moon_icon from './moon_icon.png';
-import profile_img from './profile-img.png';
+// import profile_img from './profile-img.png';
+import profile_img from './profile_img.jpg';
 import project_icon_dark from './project-icon-dark.png';
 import project_icon from './project-icon.png';
 import right_arrow_bold_dark from './right-arrow-bold-dark.png';
@@ -78,24 +79,28 @@ export const assets = {
 
 export const workData = [
     {
-        title: 'Frontend project',
-        description: 'Web Design',
+        title: 'Fat Pig BBQ',
+        description: 'Frontend Development',
         bgImage: '/work-1.png',
+        link: 'https://eatfatpigbbq.com/'
     },
     {
-        title: 'Geo based app',
-        description: 'Mobile App',
+        title: 'Domo',
+        description: 'Restaurant Reservation App',
         bgImage: '/work-2.png',
+        link: 'https://eatfatpigbbq.com/'
     },
     {
-        title: 'Photography site',
-        description: 'Web Design',
+        title: 'School Dashboard',
+        description: 'Full stack Development',
         bgImage: '/work-3.png',
+        link: 'https://eatfatpigbbq.com/'
     },
     {
-        title: 'UI/UX designing',
-        description: 'UI/UX Design',
+        title: 'SkyFall Travel',
+        description: 'Frontend Development',
         bgImage: '/work-4.png',
+        link: 'https://eatfatpigbbq.com/'
     },
 ]
 
@@ -107,8 +112,8 @@ export const serviceData = [
 ]
 
 export const infoList = [
-    { icon: assets.code_icon, iconDark: assets.code_icon_dark, title: 'Languages', description: 'HTML, CSS, JavaScript React Js, Next Js' },
-    { icon: assets.edu_icon, iconDark: assets.edu_icon_dark, title: 'Education', description: 'B.Tech in Computer Science' },
+    { icon: assets.code_icon, iconDark: assets.code_icon_dark, title: 'Skills', description: 'TypeScript, JavaScript, Python, React.js, Next.js, Node.js, Express.js, Tailwind, HTML/CSS' },
+    { icon: assets.edu_icon, iconDark: assets.edu_icon_dark, title: 'Education', description: 'Bachelors in Biochemistry' },
     { icon: assets.project_icon, iconDark: assets.project_icon_dark, title: 'Projects', description: 'Built more than 5 projects' }
 ];
 
