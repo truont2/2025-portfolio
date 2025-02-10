@@ -80,35 +80,34 @@ export const assets = {
 export const workData = [
     {
         title: 'Fat Pig BBQ',
-        description: 'Frontend Development',
+        description: 'Tools used - React, React Leaflet, Google API, Cloudinary',
         bgImage: '/work-1.png',
         link: 'https://eatfatpigbbq.com/'
     },
     {
-        title: 'Domo',
-        description: 'Restaurant Reservation App',
+        title: 'School Dashboard',
+        description: 'Tools used - Next.js, Prisma, Tailwind CSS, PostgreSQL, Clerk, Docker, React Calendar',
         bgImage: '/work-2.png',
-        link: 'https://eatfatpigbbq.com/'
+        link: 'https://github.com/truont2/school_dashboard'
     },
     {
-        title: 'School Dashboard',
-        description: 'Full stack Development',
+        title: 'Ftchr',
+        description: 'Tools used - React, Sequelize, Socket.IO, CSS, Axios, Material UI, React Leaflet, Mapbox, Cloudinary',
         bgImage: '/work-3.png',
-        link: 'https://eatfatpigbbq.com/'
+        link: 'https://github.com/truont2/ftchr-tt'
     },
     {
         title: 'SkyFall Travel',
-        description: 'Frontend Development',
+        description: 'Tools Used: avaScript, Node.js, MySQL, Express.js, Materialize, Chart.js, Axios',
         bgImage: '/work-4.png',
-        link: 'https://eatfatpigbbq.com/'
+        link: 'https://github.com/truont2/SkyFall-Travel-tt'
     },
 ]
 
 export const serviceData = [
-    { icon: assets.web_icon, title: 'Web design', description: 'Web development is the process of building, programming...', link: '' },
+    { icon: assets.web_icon, title: 'Web Development', description: 'Web development is the process of building, programming...', link: '' },
     { icon: assets.mobile_icon, title: 'Mobile app', description: 'Mobile app development involves creating software for mobile devices...', link: '' },
     { icon: assets.ui_icon, title: 'UI/UX design', description: 'UI/UX design focuses on creating a seamless user experience...', link: '' },
-    { icon: assets.graphics_icon, title: 'Graphics design', description: 'Creative design solutions to enhance visual communication...', link: '' },
 ]
 
 export const infoList = [

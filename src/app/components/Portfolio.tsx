@@ -14,7 +14,7 @@ const Portfolio = ({ isDarkMode }: Props) => {
             whileInView={{ opacity: 1 }}
             transition={{ duration: 1 }}
             id="work"
-            className="w-full px-[12%] h-screen scroll-mt-20"
+            className="w-full px-[12%] py-10 scroll-mt-20"
         >
             <motion.h4
                 initial={{ opacity: 0, y: -20 }}
@@ -72,13 +72,13 @@ const Portfolio = ({ isDarkMode }: Props) => {
                                         {project.description}
                                     </p>
                                 </div>
-                                <div className="border rounded-full border-black w-9 aspect-square flex items-center justify-center shadow-[2px_2px_0_#000] group-hover:bg-lime-300 transition">
+                                {/* <div className="border rounded-full border-black w-9 aspect-square flex items-center justify-center shadow-[2px_2px_0_#000] group-hover:bg-lime-300 transition">
                                     <Image
                                         alt="icon"
                                         src={assets.send_icon}
                                         className="w-5"
                                     />
-                                </div>
+                                </div> */}
                             </div>
                         </motion.div>
                     </Link>

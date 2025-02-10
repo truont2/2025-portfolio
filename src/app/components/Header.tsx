@@ -42,7 +42,7 @@ const Header = (props: Props) => {
                 }}
                 className="text-3xl sm:text-6xl lg:text-[66px] font-Ovo"
             >
-                Full stack developer based in Seattle,
+                Full Stack Developer based in Seattle,
             </motion.h1>
             <motion.p
                 initial={{ opacity: 0 }}
