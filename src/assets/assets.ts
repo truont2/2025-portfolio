@@ -2,30 +2,35 @@
 
 export const workData = [
     {
-        title: 'Fat Pig BBQ',
-        description: 'Tools used - React, React Leaflet, Google API, Cloudinary',
-        bgImage: '/fatpig.png',
-        link: 'https://eatfatpigbbq.com/'
+        title: "Fat Pig BBQ",
+        description:
+            "Built a user-friendly restaurant website with React, integrating interactive maps (React Leaflet, Google API) and Cloudinary for media storage.",
+        bgImage: "/fatpig.png",
+        link: "https://eatfatpigbbq.com/",
     },
     {
-        title: 'School Dashboard',
-        description: 'Tools used - Next.js, Prisma, Tailwind CSS, PostgreSQL, Clerk, Docker, React Calendar',
-        bgImage: '/dashboard.png',
-        link: 'https://github.com/truont2/school_dashboard'
+        title: "School Dashboard",
+        description:
+            "Developing a school management platform using Next.js, Prisma, and PostgreSQL, featuring authentication (Clerk) and a dynamic calendar.",
+        bgImage: "/dashboard.png",
+        link: "https://github.com/truont2/school_dashboard",
     },
     {
-        title: 'Ftchr',
-        description: 'Tools used - React, Sequelize, Socket.IO, CSS, Axios, Material UI, React Leaflet, Mapbox, Cloudinary',
-        bgImage: '/ftchr.png',
-        link: 'https://github.com/truont2/ftchr-tt'
+        title: "Whole in One Health Alzheimers App",
+        description:
+            "Worked on a healthcare application using React Native, improving accessibility for a better user experience.",
+        bgImage: "/work-1.png",
+        link: "", 
     },
     {
-        title: 'SkyFall Travel',
-        description: 'Tools Used: JavaScript, Node.js, MySQL, Express.js, Materialize, Chart.js, Axios',
-        bgImage: '/skyfall.PNG',
-        link: 'https://github.com/truont2/SkyFall-Travel-tt'
+        title: "Leadership Eastside Platform",
+        description:
+            "Developed an all-in-one resource management web app using Next.js featuring role-based access, Clerk authentication, and AWS S3 for data storage.",
+        bgImage: "/work-4.png",
+        link: "",
     },
-]
+];
+
 
 export const serviceData = [
     { 
