@@ -8,7 +8,7 @@ type Props = {
 
 const Header = (props: Props) => {
     return (
-        <div className="w-11/12 max-w-3xl text-center mx-auto h-screen flex flex-col items-center justify-center gap-4">
+        <div className="w-11/12 max-w-3xl text-center mx-auto md:h-screen flex flex-col items-center justify-center gap-4 pt-20 sm:pt-24">
             <motion.div
                 initial={{ scale: 0 }}
                 whileInView={{ scale: 1 }}

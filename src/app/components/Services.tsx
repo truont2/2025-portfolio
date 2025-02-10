@@ -2,18 +2,8 @@
 
 import { serviceData } from "@/assets/assets";
 import { motion, useInView } from "framer-motion";
-import Image from "next/image";
 import { useRef } from "react";
 import Scene from "./Scene";
-
-const listVariants = {
-    initial: { x: -100, opacity: 0 },
-    animate: {
-        x: 0,
-        opacity: 1,
-        transition: { duration: 1, staggerChildren: 0.5 },
-    },
-};
 
 type Props = {
     isDarkMode: boolean;
@@ -51,10 +41,11 @@ const Services = ({ isDarkMode }: Props) => {
                 transition={{ duration: 0.5, delay: 0.6 }}
                 className="text-center max-w-2xl mx-auto mt-5 mb-12 font-Ovo"
             >
-                I am a Full Stack Software Engineer from Seattle, Washington
-                with experience working on several full stack applications for
-                different industries ranging from education, healthcare, and
-                more.
+                I'm a Full Stack Software Engineer from Seattle, Washington,
+                with experience building web and mobile applications in
+                industries like education and healthcare. I've worked on
+                improving accessibility, redesigning user experiences, and
+                migrating databases to optimize performance and scalability.
             </motion.p>
             <motion.div
                 initial={{ opacity: 0 }}
@@ -77,13 +68,13 @@ const Services = ({ isDarkMode }: Props) => {
                                 key={idx}
                                 className="border-[0.5px] border-gray-400 rounded-xl p-6 cursor-pointer hover:bg-lighHover hover:-translate-y-1 ease-in-out duration-500 hover:shadow-black dark:border-white dark:hover:shadow-white dark:hover:bg-darkHover/50 flex items-center gap-4"
                             >
-                                <Image
+                                {/* <Image
                                     src={service.icon}
                                     alt={service.title}
                                     width={32}
                                     height={32}
                                     className="w-8 h-8"
-                                />
+                                /> */}
                                 <div>
                                     <h2 className="text-lg font-medium">
                                         {service.title}

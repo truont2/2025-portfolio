@@ -61,10 +61,11 @@ const About = ({ isDarkMode }: Props) => {
                 >
                     <p className="mb-10 max-w-2xl font-Ovo">
                         Full Stack Software Engineer with a background in
-                        Biochemistry. Currently pursuing a Master's in Computer
-                        Science at Northeastern University. Motivated to take on
-                        new challenges and develop exciting and innovative
-                        applications.
+                        Biochemistry, currently pursuing a Master's in Computer
+                        Science at Northeastern University. Passionate about
+                        tackling new challenges and building innovative
+                        applications that improve user experiences and solve
+                        real-world problems.
                     </p>
                     <motion.ul
                         initial={{ opacity: 0 }}

@@ -58,7 +58,11 @@ const Portfolio = ({ isDarkMode }: Props) => {
                         <motion.div
                             whileHover={{ scale: 1.05 }}
                             transition={{ duration: 0.3 }}
-                            className="aspect-square bg-no-repeat bg-cover bg-center rounded-lg relative cursor-pointer group"
+                            className={`aspect-square bg-no-repeat bg-cover bg-center rounded-lg relative cursor-pointer group  ${
+                                isDarkMode
+                                    ? "border-none"
+                                    : "border-[0.5px] border-gray-400"
+                            }`}
                             style={{
                                 backgroundImage: `url(${project.bgImage})`,
                             }}
