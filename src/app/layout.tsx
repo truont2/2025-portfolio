@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Outfit, Ovo } from "next/font/google";
+import Head from "next/head";
 import "./globals.css";
 
 const outfit = Outfit({
@@ -24,6 +25,9 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en" className="scroll-smooth" suppressHydrationWarning>
+            <Head>
+                <link rel="icon" href="/T.png" />
+            </Head>
             <body
                 className={`${outfit.className} ${ovo.className} antialiased leading-8 overflow-x-hidden dark:bg-darkTheme dark:text-white`}
             >

@@ -1,7 +1,7 @@
 "use client";
 
 import { serviceData } from "@/assets/assets";
-import { motion, useInView } from "motion/react";
+import { motion, useInView } from "framer-motion";
 import Image from "next/image";
 import { useRef } from "react";
 import Scene from "./Scene";
@@ -51,44 +51,20 @@ const Services = ({ isDarkMode }: Props) => {
                 transition={{ duration: 0.5, delay: 0.6 }}
                 className="text-center max-w-2xl mx-auto mt-5 mb-12 font-Ovo"
             >
-                I am a Full Stack Developer from Seattle, Washington with
-                experience working on several full stack applications for
+                I am a Full Stack Software Engineer from Seattle, Washington
+                with experience working on several full stack applications for
                 different industries ranging from education, healthcare, and
                 more.
             </motion.p>
-            <div className="flex overflow-hidden flex-col md:flex-row">
+            <motion.div
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{ duration: 0.8 }}
+                className="flex overflow-hidden flex-col md:flex-row"
+            >
                 {/* Left Section */}
                 <div className="flex flex-col justify-center px-2 md:px-12 md:w-1/2 mt-2">
                     {/* Service List */}
-                    {/* <motion.div
-                        variants={listVariants}
-                        animate={isInView ? "animate" : "initial"}
-                        className="flex flex-col gap-4 w-full"
-                    >
-                        {serviceData.map((service, idx) => (
-                            <motion.div
-                                key={idx}
-                                variants={listVariants}
-                                className="flex items-center gap-4 p-6 rounded-xl cursor-pointer dark:bg-gray-800 w-full bg-white text-gray-700 border-[0.5px] border-gray-700 dark:text-white"
-                            >
-                                <div>
-                                    <Image
-                                        src={service.icon}
-                                        alt=""
-                                        className="w-8 h-8"
-                                    />
-                                </div>
-                                <div>
-                                    <h2 className="text-lg font-medium">
-                                        {service.title}
-                                    </h2>
-                                    <p className="text-sm">
-                                        {service.description}
-                                    </p>
-                                </div>
-                            </motion.div>
-                        ))}
-                    </motion.div> */}
                     <motion.ul
                         initial={{ opacity: 0 }}
                         whileInView={{ opacity: 1 }}
@@ -99,17 +75,23 @@ const Services = ({ isDarkMode }: Props) => {
                             <motion.li
                                 whileInView={{ scale: 1.05 }}
                                 key={idx}
-                                className="border-[0.5px] border-gray-400 rounded-xl p-6 cursor-pointer hover:bg-lighHover hover:-translate-y-1 ease-in-out duration-500 hover:shadow-black dark:border-white dark:hover:shadow-white dark:hover:bg-darkHover/50"
+                                className="border-[0.5px] border-gray-400 rounded-xl p-6 cursor-pointer hover:bg-lighHover hover:-translate-y-1 ease-in-out duration-500 hover:shadow-black dark:border-white dark:hover:shadow-white dark:hover:bg-darkHover/50 flex items-center gap-4"
                             >
                                 <Image
                                     src={service.icon}
-                                    alt=""
+                                    alt={service.title}
+                                    width={32}
+                                    height={32}
                                     className="w-8 h-8"
                                 />
-                                <h2 className="text-lg font-medium">
-                                    {service.title}
-                                </h2>
-                                <p className="text-sm">{service.description}</p>
+                                <div>
+                                    <h2 className="text-lg font-medium">
+                                        {service.title}
+                                    </h2>
+                                    <p className="text-sm">
+                                        {service.description}
+                                    </p>
+                                </div>
                             </motion.li>
                         ))}
                     </motion.ul>
@@ -119,7 +101,7 @@ const Services = ({ isDarkMode }: Props) => {
                 <div className="hidden md:flex justify-center items-center w-2/3">
                     <Scene />
                 </div>
-            </div>
+            </motion.div>
         </div>
     );
 };

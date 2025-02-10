@@ -1,5 +1,4 @@
 "use client";
-import { assets } from "@/assets/assets";
 import emailjs from "@emailjs/browser";
 import { motion } from "motion/react";
 import Image from "next/image";
@@ -64,7 +63,7 @@ const Contact = ({ isDarkMode }: Props) => {
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ duration: 1 }}
-            id="contact"
+            id="contactme"
             className='w-full px-[12%] py-10 scroll-mt-20 bg-[url("/footer-bg-color.png")] bg-no-repeat bg-center bg-[length:90%_auto] dark:bg-none'
         >
             <motion.h4
@@ -166,8 +165,10 @@ const Contact = ({ isDarkMode }: Props) => {
                     {isPending ? <>Sending ...</> : "Submit now"}
                     <Image
                         alt="right arrow"
-                        src={assets.right_arrow_white}
+                        src="/right-arrow-white.png"
                         className="w-4"
+                        width={16}
+                        height={16}
                     />
                 </motion.button>
                 <div className="text-center mt-5 ">

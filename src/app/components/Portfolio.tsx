@@ -1,4 +1,4 @@
-import { assets, workData } from "@/assets/assets";
+import { workData } from "@/assets/assets";
 import { motion } from "motion/react";
 import Image from "next/image";
 import Link from "next/link";
@@ -13,7 +13,7 @@ const Portfolio = ({ isDarkMode }: Props) => {
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ duration: 1 }}
-            id="work"
+            id="mywork"
             className="w-full px-[12%] py-10 scroll-mt-20"
         >
             <motion.h4
@@ -39,7 +39,7 @@ const Portfolio = ({ isDarkMode }: Props) => {
                 className="text-center max-w-2xl mx-auto mt-5 mb-12 font-Ovo"
             >
                 Welcome to my web development portfolio! Explore a collection of
-                projects showcasing my expertise in front-end development.
+                projects showcasing my expertise.
             </motion.p>
 
             <motion.div
@@ -98,10 +98,12 @@ const Portfolio = ({ isDarkMode }: Props) => {
                             alt="arrow"
                             src={
                                 isDarkMode
-                                    ? assets.right_arrow_white
-                                    : assets.right_arrow
+                                    ? "/right-arrow-white.png"
+                                    : "/right-arrow.png"
                             }
                             className="w-4"
+                            width={16}
+                            height={16}
                         />
                     </motion.div>
                 </Link>

@@ -1,5 +1,5 @@
-import { assets, infoList, toolsData } from "@/assets/assets";
-import { motion } from "motion/react";
+import { infoList, toolsData } from "@/assets/assets";
+import { motion } from "framer-motion";
 import Image from "next/image";
 
 type Props = {
@@ -12,7 +12,7 @@ const About = ({ isDarkMode }: Props) => {
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ duration: 1 }}
-            id="about"
+            id="aboutme"
             className="w-full px-[12%] py-10 scroll-mt-20"
         >
             <motion.h4
@@ -32,7 +32,7 @@ const About = ({ isDarkMode }: Props) => {
                 About me
             </motion.h2>
 
-            {/* content */}
+            {/* Content */}
             <motion.div
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
@@ -46,9 +46,11 @@ const About = ({ isDarkMode }: Props) => {
                     className="w-64 sm:w-80 rounded-3xl max-w-none"
                 >
                     <Image
-                        alt="user image"
-                        src={assets.profile_img}
-                        className="w-full rounded-3xl"
+                        alt="User Image"
+                        src="/profile-img.jpg"
+                        width={320}
+                        height={320}
+                        className="rounded-3xl object-cover"
                     />
                 </motion.div>
                 <motion.div
@@ -58,10 +60,10 @@ const About = ({ isDarkMode }: Props) => {
                     className="flex-1"
                 >
                     <p className="mb-10 max-w-2xl font-Ovo">
-                        Full Stack Developer with a background in Biochemistry.
-                        Currently pursuing a Masters in Computer Science at
-                        Northeastern University. Motivated to take on new
-                        challenges and develop exciting and innovative
+                        Full Stack Software Engineer with a background in
+                        Biochemistry. Currently pursuing a Master's in Computer
+                        Science at Northeastern University. Motivated to take on
+                        new challenges and develop exciting and innovative
                         applications.
                     </p>
                     <motion.ul
@@ -80,7 +82,9 @@ const About = ({ isDarkMode }: Props) => {
                                     <Image
                                         src={isDarkMode ? iconDark : icon}
                                         alt={title}
-                                        className="w-7 mt-3"
+                                        width={28}
+                                        height={28}
+                                        className="mt-3"
                                     />
                                     <h3 className="my-4 font-semibold text-gray-700 dark:text-white">
                                         {title}
@@ -113,9 +117,10 @@ const About = ({ isDarkMode }: Props) => {
                                 className="flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-400 rounded-lg cursor-pointer hover:-translate-y-1 ease-in-out duration-500 hover:shadow-black dark:border-white dark:hover:shadow-white dark:hover:bg-darkHover/50"
                             >
                                 <Image
-                                    alt="tool"
+                                    alt="Tool Icon"
                                     src={item}
-                                    className="w-7 sm:w-7"
+                                    width={28}
+                                    height={28}
                                 />
                             </motion.li>
                         ))}

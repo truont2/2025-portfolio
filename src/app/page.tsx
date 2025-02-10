@@ -1,8 +1,13 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import About from "./components/About";
+import Contact from "./components/Contact";
+import Footer from "./components/Footer";
 import Header from "./components/Header";
 import Navbar from "./components/Navbar";
+import Portfolio from "./components/Portfolio";
+import Services from "./components/Services";
 
 export default function Home() {
     const [isDarkMode, setIsDarkMode] = useState<boolean>(false);
@@ -33,11 +38,11 @@ export default function Home() {
         <>
             <Navbar isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} />
             <Header isDarkMode={isDarkMode} />
-            {/* <About isDarkMode={isDarkMode} />
+            <About isDarkMode={isDarkMode} />
             <Services isDarkMode={isDarkMode} />
             <Portfolio isDarkMode={isDarkMode} />
             <Contact isDarkMode={isDarkMode} />
-            <Footer isDarkMode={isDarkMode} /> */}
+            <Footer isDarkMode={isDarkMode} />
         </>
     );
 }

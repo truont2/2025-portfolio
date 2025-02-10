@@ -85,7 +85,7 @@ const Navbar: React.FC<Props> = ({ isDarkMode, setIsDarkMode }) => {
                         <Image
                             alt="dark mode button"
                             src={
-                                isDarkMode ? "/sun-icon.png" : "/moon-icon.png"
+                                isDarkMode ? "/sun_icon.png" : "/moon_icon.png"
                             }
                             width={24}
                             height={24}
@@ -93,7 +93,7 @@ const Navbar: React.FC<Props> = ({ isDarkMode, setIsDarkMode }) => {
                         />
                     </button>
                     <Link
-                        href="#contact"
+                        href="#contactme"
                         className="hidden lg:flex items-center gap-3 px-10 py-2.5 border border-gray-500 rounded-full ml-4 font-Ovo dark:border-white/50"
                     >
                         Contact{" "}
@@ -101,8 +101,8 @@ const Navbar: React.FC<Props> = ({ isDarkMode, setIsDarkMode }) => {
                             alt="arrow icon"
                             src={
                                 isDarkMode
-                                    ? "/arrow-icon.png"
-                                    : "/arrow-icon-dark.png"
+                                    ? "/arrow-icon-dark.png"
+                                    : "/arrow-icon.png"
                             }
                             width={16}
                             height={16}

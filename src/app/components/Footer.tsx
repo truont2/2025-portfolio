@@ -1,4 +1,3 @@
-import { assets } from "@/assets/assets";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -20,11 +19,13 @@ const Footer = ({ isDarkMode }: Props) => {
                     <Image
                         src={
                             isDarkMode
-                                ? assets.mail_icon_dark
-                                : assets.mail_icon
+                                ? "/mail_icon_dark.png"
+                                : "/mail_icon.png"
                         }
                         alt="logo"
                         className="w-6"
+                        width={16}
+                        height={16}
                     />
                     takaraktruong@gmail.com
                 </div>
