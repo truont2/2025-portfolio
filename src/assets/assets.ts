@@ -22,7 +22,6 @@ import menu_white from './menu-white.png';
 import mobile_icon from './mobile-icon.png';
 import mongodb from './mongodb.png';
 import moon_icon from './moon_icon.png';
-// import profile_img from './profile-img.png';
 import profile_img from './profile_img.jpg';
 import project_icon_dark from './project-icon-dark.png';
 import project_icon from './project-icon.png';
@@ -105,17 +104,17 @@ export const workData = [
 ]
 
 export const serviceData = [
-    { icon: assets.web_icon, title: 'Web Development', description: 'Web development is the process of building, programming...', link: '' },
-    { icon: assets.mobile_icon, title: 'Mobile app', description: 'Mobile app development involves creating software for mobile devices...', link: '' },
-    { icon: assets.ui_icon, title: 'UI/UX design', description: 'UI/UX design focuses on creating a seamless user experience...', link: '' },
+    { icon: "./web-icon.png", title: 'Web Development', description: 'Web development is the process of building, programming...', link: '' },
+    { icon: './mobile-icon.png', title: 'Mobile app', description: 'Mobile app development involves creating software for mobile devices...', link: '' },
+    { icon: './ui-icon.png', title: 'UI/UX design', description: 'UI/UX design focuses on creating a seamless user experience...', link: '' },
 ]
 
 export const infoList = [
-    { icon: assets.code_icon, iconDark: assets.code_icon_dark, title: 'Skills', description: 'TypeScript, JavaScript, Python, React.js, Next.js, Node.js, Express.js, Tailwind, HTML/CSS' },
-    { icon: assets.edu_icon, iconDark: assets.edu_icon_dark, title: 'Education', description: 'Bachelors in Biochemistry' },
-    { icon: assets.project_icon, iconDark: assets.project_icon_dark, title: 'Projects', description: 'Built more than 5 projects' }
+    { icon: '/code-icon.png', iconDark: '/code-icon-dark.png', title: 'Skills', description: 'TypeScript, JavaScript, Python, React.js, Next.js, Node.js, Express.js, Tailwind, HTML/CSS' },
+    { icon: '/edu-icon.png', iconDark: '/edu-icon-dark.png', title: 'Education', description: 'Bachelors in Biochemistry' },
+    { icon: '/project-icon.png', iconDark: '/project-icon-dark.png', title: 'Projects', description: 'Built more than 5 projects' }
 ];
 
 export const toolsData = [
-    assets.vscode, assets.firebase, assets.mongodb, assets.figma, assets.git
+    '/vscode.png', '/firebase.png', '/mongodb.png', '/figma.png', '/git.png'
 ];

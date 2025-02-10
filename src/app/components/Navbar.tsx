@@ -1,4 +1,3 @@
-import { assets } from "@/assets/assets";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
@@ -25,13 +24,12 @@ const Navbar: React.FC<Props> = ({ isDarkMode, setIsDarkMode }) => {
     };
 
     useEffect(() => {
-        window.addEventListener("scroll", () => {
-            if (scrollY > 50) {
-                setScroll(true);
-            } else {
-                setScroll(false);
-            }
-        });
+        const handleScroll = () => {
+            setScroll(window.scrollY > 50);
+        };
+
+        window.addEventListener("scroll", handleScroll);
+        return () => window.removeEventListener("scroll", handleScroll);
     }, []);
 
     return (
@@ -39,8 +37,11 @@ const Navbar: React.FC<Props> = ({ isDarkMode, setIsDarkMode }) => {
             <div className="fixed top-0 right-0 w-11/12 -z-10 translate-y-[-80%] dark:hidden">
                 <Image
                     alt="navbar background"
-                    src={assets.header_bg_color}
+                    src="/header-bg-color.png"
+                    width={1920}
+                    height={1080}
                     className="w-full"
+                    priority
                 />
             </div>
             <nav
@@ -51,12 +52,7 @@ const Navbar: React.FC<Props> = ({ isDarkMode, setIsDarkMode }) => {
                 }`}
             >
                 <Link href="#top">
-                    {/* <Image
-                        alt=""
-                        src={isDarkMode ? assets.logo_dark : assets.logo}
-                        className="w-28"
-                    /> */}
-                    <h1 className="text-2xl uppercase ">Takara Truong</h1>
+                    <h1 className="text-2xl uppercase">Takara Truong</h1>
                 </Link>
 
                 <ul
@@ -66,31 +62,22 @@ const Navbar: React.FC<Props> = ({ isDarkMode, setIsDarkMode }) => {
                             : "bg-white shadow-sm bg-opacity-50 dark:border dark:border-white/50 dark:bg-transparent"
                     } `}
                 >
-                    <li>
-                        <Link href="#top" className="font-Ovo">
-                            Home
-                        </Link>
-                    </li>
-                    <li>
-                        <Link href="#about" className="font-Ovo">
-                            About Me
-                        </Link>
-                    </li>
-                    <li>
-                        <Link href="#services" className="font-Ovo">
-                            Services
-                        </Link>
-                    </li>
-                    <li>
-                        <Link href="#work" className="font-Ovo">
-                            My Work
-                        </Link>
-                    </li>
-                    <li>
-                        <Link href="#contact" className="font-Ovo">
-                            Contact Me
-                        </Link>
-                    </li>
+                    {[
+                        "Home",
+                        "About Me",
+                        "Services",
+                        "My Work",
+                        "Contact Me",
+                    ].map((item, index) => (
+                        <li key={index}>
+                            <Link
+                                href={`#${item.toLowerCase().replace(" ", "")}`}
+                                className="font-Ovo"
+                            >
+                                {item}
+                            </Link>
+                        </li>
+                    ))}
                 </ul>
 
                 <div className="flex items-center gap-4">
@@ -98,8 +85,10 @@ const Navbar: React.FC<Props> = ({ isDarkMode, setIsDarkMode }) => {
                         <Image
                             alt="dark mode button"
                             src={
-                                isDarkMode ? assets.sun_icon : assets.moon_icon
+                                isDarkMode ? "/sun-icon.png" : "/moon-icon.png"
                             }
+                            width={24}
+                            height={24}
                             className="w-6"
                         />
                     </button>
@@ -109,90 +98,67 @@ const Navbar: React.FC<Props> = ({ isDarkMode, setIsDarkMode }) => {
                     >
                         Contact{" "}
                         <Image
-                            alt=""
+                            alt="arrow icon"
                             src={
                                 isDarkMode
-                                    ? assets.arrow_icon_dark
-                                    : assets.arrow_icon
+                                    ? "/arrow-icon.png"
+                                    : "/arrow-icon-dark.png"
                             }
+                            width={16}
+                            height={16}
                             className="w-3"
                         />
                     </Link>
                     <button className="block md:hidden ml-3" onClick={openMenu}>
                         <Image
-                            alt="dark mode button"
+                            alt="menu button"
                             src={
                                 isDarkMode
-                                    ? assets.menu_white
-                                    : assets.menu_black
+                                    ? "/menu-white.png"
+                                    : "/menu-black.png"
                             }
+                            width={24}
+                            height={24}
                             className="w-6"
                         />
                     </button>
                 </div>
 
                 {/* mobile menu bar */}
-
                 <ul
                     ref={sideMenuRef}
-                    className="flex md:hidden flex-col gap-4 py-20 px-10 fixed -right-64 top-0 bottom-0 w-64 z-50 h-screen bg-rose-50 transition duration-500 dark:bg-darkHover dark:text-white "
+                    className="flex md:hidden flex-col gap-4 py-20 px-10 fixed -right-64 top-0 bottom-0 w-64 z-50 h-screen bg-rose-50 transition duration-500 dark:bg-darkHover dark:text-white"
                 >
                     <div className="absolute right-6 top-6" onClick={closeMenu}>
                         <Image
                             src={
                                 isDarkMode
-                                    ? assets.close_white
-                                    : assets.close_black
+                                    ? "/close-white.png"
+                                    : "/close-black.png"
                             }
                             alt="close button"
-                            className="w-5 curser-pointer"
+                            width={20}
+                            height={20}
+                            className="w-5 cursor-pointer"
                         />
                     </div>
-                    <li>
-                        <Link
-                            href="#top"
-                            className="font-Ovo"
-                            onClick={closeMenu}
-                        >
-                            Home
-                        </Link>
-                    </li>
-                    <li>
-                        <Link
-                            href="#about"
-                            className="font-Ovo"
-                            onClick={closeMenu}
-                        >
-                            About Me
-                        </Link>
-                    </li>
-                    <li>
-                        <Link
-                            href="#services"
-                            className="font-Ovo"
-                            onClick={closeMenu}
-                        >
-                            Services
-                        </Link>
-                    </li>
-                    <li>
-                        <Link
-                            href="#work"
-                            className="font-Ovo"
-                            onClick={closeMenu}
-                        >
-                            My Work
-                        </Link>
-                    </li>
-                    <li>
-                        <Link
-                            href="#contact"
-                            className="font-Ovo"
-                            onClick={closeMenu}
-                        >
-                            Contact Me
-                        </Link>
-                    </li>
+                    {[
+                        "Home",
+                        "About Me",
+                        "Services",
+                        "My Work",
+                        "Contact Me",
+                    ].map((item, index) => (
+                        <li key={index}>
+                            <Link
+                                href={`#${item.toLowerCase().replace(" ", "")}`}
+                                className="font-Ovo"
+                                onClick={closeMenu}
+                            >
+                                {item}
+                            </Link>
+                        </li>
+                    ))}
                 </ul>
             </nav>
         </>
