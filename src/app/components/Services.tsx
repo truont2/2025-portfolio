@@ -41,9 +41,9 @@ const Services = ({ isDarkMode }: Props) => {
                 transition={{ duration: 0.5, delay: 0.6 }}
                 className="text-center max-w-2xl mx-auto mt-5 mb-12 font-Ovo"
             >
-                I'm a Full Stack Software Engineer from Seattle, Washington,
+                I am a Full Stack Software Engineer from Seattle, Washington,
                 with experience building web and mobile applications in
-                industries like education and healthcare. I've worked on
+                industries like education and healthcare. I have worked on
                 improving accessibility, redesigning user experiences, and
                 migrating databases to optimize performance and scalability.
             </motion.p>
