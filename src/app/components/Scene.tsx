@@ -24,10 +24,10 @@ export default function Scene() {
                 <Stage environment="night" intensity={0.5}>
                     <Model />
                 </Stage>
-                <OrbitControls enableZoom={false} autoRotate />
+                <OrbitControls enableZoom={true} autoRotate />
                 <PerspectiveCamera
                     position={[-1, 0, 1.8]}
-                    zoom={0.8}
+                    zoom={0.7}
                     makeDefault
                 />
             </Suspense>
